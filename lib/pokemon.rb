@@ -20,4 +20,5 @@ class Pokemon
   # def alter_hp (health_power)
   #   @db.execute("UPDATE pokemon SET hp = ? WHERE id = ?", health_power, @id);
   # end
+  # ALTER TABLE pokemon ADD hp INETGER DEFAULT 60; 
 end
