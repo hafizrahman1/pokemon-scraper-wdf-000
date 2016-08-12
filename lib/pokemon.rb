@@ -14,11 +14,11 @@ class Pokemon
   end
 
   def self.find(id, database_connection)
-    database_connection.execute("SELECT * FROM pokemon WHERE id = id")
+    database_connection.execute("SELECT * FROM pokemon WHERE id = ?", id)
   end
 
-  # def alter_hp (health_power)
-  #   @db.execute("UPDATE pokemon SET hp = ? WHERE id = ?", health_power, @id);
-  # end
-  # ALTER TABLE pokemon ADD hp INETGER DEFAULT 60; 
+  def alter_hp (health_power)
+    @db.execute("UPDATE pokemon SET hp = ? WHERE id = ?", health_power, @id);
+  end
+ 
 end
