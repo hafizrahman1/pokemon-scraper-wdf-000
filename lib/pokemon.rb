@@ -18,7 +18,7 @@ class Pokemon
   end
 
   def alter_hp (health_power)
-    @db.execute("UPDATE pokemon SET hp = ? WHERE id = ?", health_power, @id);
+    @db.execute("UPDATE pokemon SET hp = ? WHERE id = ?", health_power, id);
   end
  
 end
